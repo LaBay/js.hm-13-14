@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.testField{
+	position: relative;
+	width: 500px;
+	height: 800px;
+	margin: 50px 0 0 250px;
+	padding: 30px;
+	border: 1px solid gray;
+	background: ivory;
+	box-shadow: 0px 0px 10px black;
+	font-family: Arial;
+}
+
+.testField h1, p{
+	text-align: center;
+}
+
+.testField ul{
+	margin-top: 30px;
+	padding-top: 20px;
+	list-style: none;
+	border-top: 1px solid gray;
+}
+
+.testField label:hover{
+	cursor: pointer;
+	text-shadow: 0px 0px 10px black;
+}
+
+.testField li{
+	margin: 15px 0 0 15px;
+}
+
+button{
+	height: 30px;
+	width: 100px;
+	border-radius: 2px;
+	box-shadow: 0px 0px 1px black;
+	background: transparent;
+}
+
+button:hover{
+	box-shadow: 0px 0px 10px black;
+	cursor: pointer;
+}
+
+#proceed{
+	margin: 30px 0 0 200px;
+}
+
+#modalWindow{
+	position: fixed;
+	height: 300px;
+	width: 450px;
+	top: 150px;
+	left: 295px;
+	padding: 15px 0 0 20px;
+	border: 2px solid gray;
+	border-radius: 20px;
+	background: lightgray;
+	z-index: -1;
+	opacity: 0;
+	box-shadow: 0px 0px 10px black;
+}
+
+#modalWindow p{
+	text-align: left;
+	margin-top: 25px;
+}
+
+#modalWindow span{
+	font-weight: bold;
+	opacity: 1;
+}
+
+#reset{
+	margin: 100px 0 0 160px;
+}

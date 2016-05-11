@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  	<script src="js/template.js"></script>
+  	<script src="js/QBase.js"></script>
+  	<script src="js/script.js" defer></script>
+</head>
+<body>
+	
+	<script type="text/template" id="testBody">
+		<div class="testField">
+			<h1><%= title %></h1>
+			<p><%= task %></p>
+				<% for ( var i = 0; i < QBase.questions.length; i++ ) { %>
+					<ul> 
+						<h3><%= questions[i].question %></h3>
+							<% for ( var k = 0; k < QBase.questions[i].answersBlock.length; k++ ) { %>
+								<li>
+									<label>
+										<input type="checkbox" id="<%= 'chBox_'+i+'_'+k %>">
+										 <%= questions[i].answersBlock[k].answer %> 
+									</label>
+								</li>
+							<% } %>
+					</ul>
+				<% } %>
+
+			<button id="proceed">Проверить</button>
+			<div id="modalWindow">
+				<p id="positive">Количество правильных ответов <span></span></p>
+				<p id="negative">Количество неправильных ответов <span></span></p>
+				<p id="total"><span></span></p>
+				<button id="reset">Начать заново</button>
+			</div>
+		</div>
+	</script>
+
+</body>
+</html>
